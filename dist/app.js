@@ -19,6 +19,7 @@ app.get("/ip", async (_, res) => {
   res.json(json);
 });
 app.get("/users", async (_, res) => {
+  console.log("get_users");
   const allUsers = await prisma.user.findMany({
     include: {
       posts: true,
@@ -27,10 +28,6 @@ app.get("/users", async (_, res) => {
   });
   res.json(allUsers);
 });
-{
-  app.listen(3e3);
-  console.log("listening on http://localhost:3000/");
-}
 const vitePrismaApp = app;
 export {
   vitePrismaApp
