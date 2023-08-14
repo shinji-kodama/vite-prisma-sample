@@ -15,6 +15,7 @@ prismaでpostgresに接続するリポジトリ
 ## 操作
 
 ### 立ち上げ方
+- .env.localをコピーして.envを作成
 - `yarn`で依存関係をインストール
 - `docker compose up -d`でpostgresを立ち上げる
 - `yarn dev`で開発サーバーを立ち上げる
